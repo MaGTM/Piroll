@@ -25,18 +25,18 @@ function showPic(n) {
     }
     href = href[n-1].getAttribute('src')
     console.log(href)
-    modal.classList.add("active");
+    modal.classList.add("active__modal");
     img.setAttribute('src', String(href));
     modal.style.height = String(img.height) + "px";
 
     close.addEventListener("click", function() {
-        modal.classList.remove("active");
+        modal.classList.remove("active__modal");
         for(i = 0; i < sections.length; i++) {
             sections[i].style.filter = ""
         }
     })
     window.addEventListener('scroll', function() {
-        modal.classList.remove("active");
+        modal.classList.remove("active__modal");
         for(i = 0; i < sections.length; i++) {
             sections[i].style.filter = ""
         }
