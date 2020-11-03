@@ -688,4 +688,51 @@ footer .footer__container__list {
 footer .footer__container__list ul {
   margin-right: 55px;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 800px;
+}
+
+.modal img {
+  position: absolute;
+  z-index: 4000;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal img::before {
+  height: 10px;
+  width: 10px;
+  background: red;
+}
+
+.modal #close {
+  position: relative;
+  z-index: 5000;
+  color: white;
+  font-size: 40px;
+  opacity: 50%;
+  margin: 3%;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.modal #close:hover {
+  color: #c2c2c2;
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
