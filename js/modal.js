@@ -28,15 +28,18 @@ function showPic(n) {
     modal.classList.add("active__modal");
     img.setAttribute('src', String(href));
     modal.style.height = String(img.height) + "px";
+    img.classList.add("active__img");
 
     close.addEventListener("click", function() {
         modal.classList.remove("active__modal");
+        img.classList.remove("active__img");
         for(i = 0; i < sections.length; i++) {
             sections[i].style.filter = ""
         }
     })
     window.addEventListener('scroll', function() {
         modal.classList.remove("active__modal");
+        img.classList.remove("active__img");
         for(i = 0; i < sections.length; i++) {
             sections[i].style.filter = ""
         }
