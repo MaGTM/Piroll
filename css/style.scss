@@ -63,6 +63,18 @@ header {
                     }
                 }
             }
+
+            &__burger {
+                display: none;
+                span {
+                    display: block;
+                    position: relative;
+                    height: 2px;
+                    width: 25px;
+                    background: #000;
+                    margin: 5px 0;
+                }
+            }
         }
     }
 
@@ -539,12 +551,6 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        &::before {
-            height: 10px;
-            width: 10px;
-            background: red;
-        }
     }
     #close {
         position: relative;
@@ -566,3 +572,55 @@ footer {
     display: flex;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        .header__container {
+            .navbar {
+                &__list {
+                    left: 1000px;
+                    top: -20%;
+                    transform: translateY(100%);
+                    flex-direction: column;
+                    position: absolute;
+                    background-color:#bcbcbc;
+                    align-items: center;
+                    padding: 20px;
+                    border-radius: 10px;
+                    
+                    li {
+                        padding-bottom: 20px;
+                        font-size: 20px;
+                    }
+                }
+
+                &__burger {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .active__burger {
+                    transition: all 1s ease;
+
+                    span {
+                        &:nth-child(1) {
+                            transform: rotate(-45deg) translate(-6px, 6px);
+                        }
+    
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        
+                        &:nth-child(3) {
+                            transform: rotate(45deg) translate(-4px, -4px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

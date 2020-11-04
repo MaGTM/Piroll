@@ -27,3 +27,50 @@ function showSlides(slideNum) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+// Меню Бургер
+
+function burger() {
+    let burger = document.querySelector(".navbar__burger"),
+        list = document.querySelector(".navbar__list"),
+        listLi = document.getElementsByClassName('navbar__list__li'),
+        listLeft = window.getComputedStyle(list).left;
+
+    burger.addEventListener('click', function() {
+        if(window.getComputedStyle(list).left === listLeft) {
+            burger.classList.add('active__burger');
+            list.animate([
+                {left: '70%'}
+            ], {
+                // timing options
+                duration: 400,
+                fill: "forwards"
+            })
+        }
+        if(window.getComputedStyle(list).left != listLeft) {
+            burger.classList.remove('active__burger');
+            list.animate([
+                {left: listLeft}
+            ], {
+                // timing options
+                duration: 400,
+                fill: "forwards"
+            })
+        }
+        
+    })
+
+    window.addEventListener('scroll', function() {
+        burger.classList.remove('active__burger');
+        list.animate([
+            {left: listLeft}
+        ], {
+            // timing options
+            duration: 400,
+            fill: "forwards"
+        })
+    })
+}
+
+burger()
