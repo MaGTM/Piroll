@@ -24,7 +24,6 @@ function showPic(n) {
         sections[i].style.filter = "blur(4px)"
     }
     href = href[n-1].getAttribute('src')
-    console.log(href)
     modal.classList.add("active__modal");
     img.setAttribute('src', String(href));
     modal.style.height = String(img.height) + "px";

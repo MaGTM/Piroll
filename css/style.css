@@ -192,7 +192,7 @@ header .header__content__text span:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 100px;
-  width: 960px;
+  max-width: 960px;
 }
 
 .about__skills__text #design {
@@ -261,12 +261,12 @@ header .header__content__text span:hover {
 }
 
 .about__skills__img {
-  width: 960px;
+  max-width: 960px;
   height: 570px;
 }
 
 .about__skills__img img {
-  width: 960px;
+  max-width: 960px;
   height: 570px;
 }
 
@@ -378,6 +378,11 @@ header .header__content__text span:hover {
   font-weight: 400;
   color: #787878;
   line-height: 28px;
+}
+
+.process #vimeo {
+  width: 1170px;
+  height: 570px;
 }
 
 .services {
@@ -722,6 +727,7 @@ footer .footer__container__list ul {
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+  width: 800px;
 }
 
 .modal .active__img {
@@ -756,7 +762,12 @@ footer .footer__container__list ul {
   body {
     overflow-x: hidden;
   }
+  header .header__container .navbar #logo {
+    width: 30px;
+    height: 25px;
+  }
   header .header__container .navbar__list {
+    display: none;
     left: 1000px;
     top: -20%;
     -webkit-transform: translateY(100%);
@@ -795,6 +806,80 @@ footer .footer__container__list ul {
   header .header__container .navbar .active__burger span:nth-child(3) {
     -webkit-transform: rotate(45deg) translate(-4px, -4px);
             transform: rotate(45deg) translate(-4px, -4px);
+  }
+  header .header__content {
+    text-align: center;
+  }
+  .about__skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__skills__text {
+    padding: 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__skills__img {
+    display: none;
+  }
+  .about__icons {
+    padding: 0 50px;
+  }
+  .about__icons img {
+    height: 40px;
+  }
+  .about__icons__1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+  }
+  .about__icons__1__content {
+    margin-left: 15px;
+  }
+  .about__images__content__row {
+    display: block;
+    text-align: center;
+  }
+  .about__images__content__row__img {
+    width: 350px;
+    height: 250px;
+  }
+  .modal {
+    width: 650px;
+  }
+  .modal img {
+    width: 650px;
+  }
+  .process #vimeo {
+    width: 700px;
+    height: 390px;
+  }
+  .services {
+    padding: 50px 0;
+  }
+  .services__content__block h4 {
+    padding: 15px 0;
+  }
+  footer {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+  footer .footer__container__list ul {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

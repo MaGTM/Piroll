@@ -40,6 +40,7 @@ function burger() {
     burger.addEventListener('click', function() {
         if(window.getComputedStyle(list).left === listLeft) {
             burger.classList.add('active__burger');
+            list.style.display = 'flex';
             list.animate([
                 {left: '70%'}
             ], {
@@ -57,6 +58,7 @@ function burger() {
                 duration: 400,
                 fill: "forwards"
             })
+            setTimeout(displayFlex, 400);
         }
         
     })
@@ -71,6 +73,11 @@ function burger() {
             fill: "forwards"
         })
     })
+}
+
+function displayFlex() {
+    let list = document.querySelector(".navbar__list")
+    list.style.display = 'none'
 }
 
 burger()
