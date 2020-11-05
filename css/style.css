@@ -120,22 +120,19 @@ header .header__content__text p {
   line-height: 28px;
 }
 
-header .header__content__text span {
-  background-color: #10c9c3;
-  padding: 20px 45px;
-  -webkit-transition: background-color 0.6s;
-  transition: background-color 0.6s;
-}
-
-header .header__content__text span a {
+header .header__content__text a {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;
+  background: #10c9c3;
+  padding: 20px 40px;
+  cursor: pointer;
+  -webkit-transition: background 0.6s;
+  transition: background 0.6s;
 }
 
-header .header__content__text span:hover {
-  background-color: #11b6b0;
-  cursor: pointer;
+header .header__content__text a:hover {
+  background: #0fb3ad;
 }
 
 .about {
