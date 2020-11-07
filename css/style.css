@@ -189,7 +189,7 @@ header .header__content__text a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 100px;
-  max-width: 960px;
+  width: 960px;
 }
 
 .about__skills__text #design {
@@ -307,7 +307,7 @@ header .header__content__text a:hover {
 }
 
 .about__images__content__row__img {
-  max-width: 450px;
+  width: 450px;
   height: 350px;
   margin: 0;
   -webkit-transition: -webkit-transform 0.5s;
@@ -755,6 +755,54 @@ footer .footer__container__list ul {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1440px) {
+  .about__skills__img {
+    width: 700px;
+  }
+  .about__skills__img img {
+    width: 700px;
+  }
+  .about__images__content__row {
+    display: block;
+    text-align: center;
+  }
+  .about__images__content__row__img {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about__skills__text {
+    padding: 50px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__skills__img {
+    display: none;
+  }
+  .about__images__content__row__img {
+    width: 350px;
+    height: 250px;
+  }
+  .about__icons__1 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__icons__1 img {
+    height: 40px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -807,53 +855,18 @@ footer .footer__container__list ul {
   header .header__content {
     text-align: center;
   }
-  .about__skills {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about__skills__text {
-    padding: 50px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .about__skills__img {
-    display: none;
-  }
   .about__icons {
     padding: 0 50px;
   }
-  .about__icons img {
-    height: 40px;
-  }
   .about__icons__1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     font-size: 14px;
   }
   .about__icons__1__content {
     margin-left: 15px;
   }
-  .about__images__content__row {
-    display: block;
-    text-align: center;
-  }
   .about__images__content__row__img {
-    width: 350px;
-    height: 250px;
+    width: 450px;
+    height: 300px;
   }
   .modal {
     width: 650px;
@@ -877,6 +890,52 @@ footer .footer__container__list ul {
   }
   footer .footer__container__list ul {
     margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header .header__container {
+    padding: 25px 50px 0 50px;
+  }
+  header .header__container .navbar__list {
+    left: 700px;
+  }
+  header .header__content {
+    margin-top: 50px;
+    padding: 0 15px 0;
+  }
+  header .header__content__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__text {
+    text-align: center;
+  }
+  .about__skills__text #design {
+    width: 300px;
+  }
+  .about__skills__text #design:after {
+    width: 201px;
+  }
+  .about__skills__text #web {
+    width: 300px;
+  }
+  .about__skills__text #web:after {
+    width: 258px;
+  }
+  .about__skills__text #marketing {
+    width: 300px;
+  }
+  .about__skills__text #marketing:after {
+    width: 168px;
   }
 }
 /*# sourceMappingURL=style.css.map */

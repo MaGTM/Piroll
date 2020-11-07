@@ -144,7 +144,7 @@ header {
             justify-content: center;
             flex-direction: column;
             padding-left: 100px;
-            max-width: 960px;
+            width: 960px;
             
             #design {
                 padding-bottom: 30px;
@@ -247,7 +247,7 @@ header {
                 display: flex;
                 justify-content: center;
                 &__img {
-                    max-width: 450px;
+                    width: 450px;
                     height: 350px;
                     margin: 0;
                     transition: transform 0.5s;
@@ -584,6 +584,68 @@ footer {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1440px) {
+    .about {
+
+        &__skills {
+            &__img {
+                width: 700px;
+                img {
+                    width: 700px;
+                }
+            }
+        }
+
+        &__images {
+            &__content {
+                &__row {
+                    display: block;
+                    text-align: center;
+                    &__img {
+                        width: 500px;
+                        height: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        &__skills {
+            &__text {
+                padding: 50px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__img {
+                display: none;
+            }
+        }
+        &__images {
+            &__content {
+                &__row {
+                    &__img {
+                        width: 350px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+
+        &__icons {
+            &__1 {
+                align-items: center;
+                img {
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -646,32 +708,11 @@ footer {
     }
 
     .about {
-        &__skills {
-            flex-direction: column;
-
-            &__text {
-                padding: 50px 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-            }
-
-            &__img {
-                display: none;
-            }
-        }
 
         &__icons {
             padding: 0 50px;
 
-            img {
-                height: 40px;
-            }
-
             &__1 {
-                display: flex;
-                align-items: center;
                 font-size: 14px;
 
                 &__content {
@@ -683,12 +724,9 @@ footer {
         &__images {
             &__content {
                 &__row {
-                    display: block;
-                    text-align: center;
-
                     &__img {
-                        width: 350px;
-                        height: 250px;
+                        width: 450px;
+                        height: 300px;
                     }
                 }
             }
@@ -728,6 +766,63 @@ footer {
         .footer__container__list {
             ul {
                 margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        .header__container {
+            padding: 25px 50px 0 50px;
+
+            .navbar {
+                &__list {
+                    left: 700px;
+                }
+            }
+        }
+
+        .header__content {
+            margin-top: 50px;
+            padding: 0 15px 0;
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    .about {
+        &__text {
+            text-align: center;
+        }
+
+        &__skills {
+            &__text {
+                #design {
+                    width: 300px;
+
+                    &:after {
+                        width: 201px;
+                    }
+                }
+                #web {
+                    width: 300px;
+
+                    &:after {
+                        width: 258px;
+                    }
+                }
+                #marketing {
+                    width: 300px;
+
+                    &:after {
+                        width: 168px;
+                    }
+                }
             }
         }
     }

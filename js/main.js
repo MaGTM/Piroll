@@ -38,7 +38,8 @@ function burger() {
         listLeft = window.getComputedStyle(list).left;
 
     burger.addEventListener('click', function() {
-        if(window.getComputedStyle(list).left === listLeft) {
+        console.log(window.getComputedStyle(list).left);
+        if(window.getComputedStyle(list).left === '1000px') {
             burger.classList.add('active__burger');
             list.style.display = 'flex';
             list.animate([
@@ -49,6 +50,19 @@ function burger() {
                 fill: "forwards"
             })
         }
+
+        if(window.getComputedStyle(list).left === '700px') {
+            burger.classList.add('active__burger');
+            list.style.display = 'flex';
+            list.animate([
+                {left: '50%'}
+            ], {
+                // timing options
+                duration: 400,
+                fill: "forwards"
+            })
+        }
+
         if(window.getComputedStyle(list).left != listLeft) {
             burger.classList.remove('active__burger');
             list.animate([
