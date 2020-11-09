@@ -850,23 +850,56 @@ footer {
     }
 
     .process {
+        padding: 80px 0;
+        height: 100%;
         #vimeo {
             width: 380px;
             height: 300px;
         }
     }
 
-    .testimonials {
+    .services {
+        height: 100%;
         &__content {
-            }
-            &__dots {
+            flex-direction: column;
 
+            &__block {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .testimonials {
+        height: 950px;
+        position: relative;
+        &__content {
+            &__dots {
+                position: absolute;
+                width: 100%;
+                top: 40%;
+                left: 50%;
+                transform: translate(-51%, -50%);
                 margin-top: 50px;
                 &__item {
                     height: 10px;
                     width: 10px;
                     margin: 0 2px;
                 }
+            }
+        }
+
+        &__companies {
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 200px 200px;
+            gap: 25px 50px;
+            grid-template-areas:
+                ". ."
+                ". .";
+
+            img {
+                width: 100px;
             }
         }
     }
